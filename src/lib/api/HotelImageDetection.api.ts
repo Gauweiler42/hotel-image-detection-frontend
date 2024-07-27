@@ -16,11 +16,7 @@ class HotelImageDetectionAPI {
     formData.append('file', file);
 
     try {
-      const response = await axios.post(`${this.apiUrl}/hotel-image-detection/predict`, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      });
+      const response = await axios.post(`${this.apiUrl}/hotel-image-detection/predict`, formData);
       return response.data;
     } catch (error) {
       console.error('Error in image detection:', error);
@@ -29,4 +25,4 @@ class HotelImageDetectionAPI {
   }
 }
 
-export default new HotelImageDetectionAPI();
+export default HotelImageDetectionAPI;
