@@ -42,7 +42,7 @@ export default function TestDetection() {
       </form>
       {result && (
         <>
-          <b className='text-white'>Prediction took {result.predition_time} ms</b>
+          <b className='text-white'>Prediction took {result.prediction_time} ms</b>
           <table className="mt-4">
             <thead>
               <tr>
